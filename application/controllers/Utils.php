@@ -1,0 +1,15 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Utils extends CI_controller{
+    
+    public function migrate(){
+        $this->load->library("migration");
+        $sucesso = $this->migration->current();
+        if ($sucesso) {
+            echo "migrado";
+        }else{
+            show_error($this->migration->error_string());
+        }
+    }
+}
