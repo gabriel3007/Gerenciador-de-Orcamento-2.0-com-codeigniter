@@ -40,6 +40,7 @@ Class valida_form{
         $this->CI->form_validation->set_rules("nome", " ", "required|categoria_ja_existe");
         $this->CI->form_validation->set_rules("id", "Id", "required|integer");
         $this->CI->form_validation->set_rules("usuario_id", "Id usuario", "required|integer");
+        $this->CI->form_validation->set_rules("saldo", "Saldo", "required|numeric");
         $this->CI->form_validation->set_error_delimiters("<p class='alert-danger'>", "</p>");
         $dadosInseridos =  $this->CI->form_validation->run();
         $manteveMesmoNome = $this->CI->CategoriaDao->ehValidoEditarMesmoNome($dadosCategoria['nome'], $dadosCategoria['id']);

@@ -21,7 +21,7 @@ class Orcamento extends CI_Controller{
     public function index(){
         $orcamento = $this->gerenciador_orcamento->orcamentoUsuario();
         if(count($orcamento->lancamentos) == 0){
-            $this->load->template("orcamento/teste");
+            $this->load->template("orcamento/valor-inicial");
         }else{
             $dados = ['orcamento' => $orcamento];
             $this->load->template("orcamento/index", $dados);

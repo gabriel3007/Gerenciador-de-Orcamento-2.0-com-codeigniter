@@ -7,6 +7,7 @@
     </div>
     <input type="hidden" name="usuario_id" value="<?=$usuario->id?>">
     <input type="hidden" name="id" value="<?=$categoria->id?>">
+    <input type="hidden" name="saldo" value="<?=$categoria->saldo?>">
     <input type="hidden" name="<?=$csrf['nome']?>" value="<?=$csrf['hash']?>">
     <button class="btn btn-default btn-block" type="submit">Editar</button>
 </form>

@@ -12,6 +12,7 @@ class Categoria implements Objeto{
     function __construct($params){
         if(isset($params['id'])) $this->id = $params['id'];
         if(isset($params['saldo'])) $this->saldo = $params['saldo'];
+        else $this->saldo = 0;
         if(isset($params['usuario_id'])) $this->usuario_id = $params['usuario_id'];
         $this->nome = $params['nome'];      
     }
@@ -27,7 +28,7 @@ class Categoria implements Objeto{
     public function toArray(){
         $array = [
             'nome' => $this->nome,
-            'saldo' => 0,
+            'saldo' => $this->saldo,
             'usuario_id' => $this->usuario_id
         ];
         return $array;
