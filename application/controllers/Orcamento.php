@@ -23,7 +23,8 @@ class Orcamento extends CI_Controller{
         if(count($orcamento->lancamentos) == 0){
             $this->load->template("orcamento/valor-inicial");
         }else{
-            $dados = ['orcamento' => $orcamento];
+            $categorias = $this->gerenciador_orcamento->buscaCategorias($this->usuario->id);
+            $dados = ['orcamento' => $orcamento, "categorias" => $categorias];
             $this->load->template("orcamento/index", $dados);
         }
     }

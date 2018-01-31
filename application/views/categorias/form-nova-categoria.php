@@ -3,7 +3,7 @@
 <form action="<?=base_url('categorias/adicionaNovaCategoria')?>" method="post">
     <div class="form-group">
         <label for="">Categoria</label>
-        <input class="form-control" type="text" name="nome" value="<?=set_value('nome','')?>">
+        <input class="form-control" type="text" name="nome" required value="<?=set_value('nome','')?>">
     </div>
     <input type="hidden" name="usuario_id" value="<?=$usuario->id?>">
     <input type="hidden" name="<?=$csrf['nome']?>" value="<?=$csrf['hash']?>">

@@ -1,0 +1,11 @@
+.valor-negativo{
+    background-color: crimson;
+}
+
+.valor-positivo{
+    background-color: chartreuse;
+}
+
+.invisivel{
+	display: none;
+}

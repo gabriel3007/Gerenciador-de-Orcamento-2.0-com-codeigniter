@@ -3,32 +3,33 @@
 $erros = $this->session->flashdata("erros");
 $dadosInseridos = $this->session->flashdata("dadosInseridos");
 ?>
-<form action="<?=base_url('usuarios/novo')?>" method="post">
+<form id="form-novo-usuario" action="<?=base_url('usuarios/novo')?>" method="post">
     <div class="form-group">
-        <label for="">Nome</label>
+        <label for="input-nome">Nome</label>
         <?=$erros['nome']?>
-        <input class="form-control" type="text" name="nome" value="<?=$dadosInseridos["nome"]?>">
+        <input class="form-control" id="input-nome" type="text" name="nome" required autofocus value="<?=$dadosInseridos["nome"]?>">
     </div>
     <div class="form-group">
-        <label for="">Email</label>
+        <label for="input-email">Email</label>
         <?=$erros['email']?>
-        <input class="form-control" type="email" name="email" value="<?=$dadosInseridos["email"]?>">
+        <input class="form-control" id="input-email" type="email" name="email" required value="<?=$dadosInseridos["email"]?>">
     </div>
      <div class="form-group">
-        <label for="">Corfirmar Email</label>
+        <label for="input-confirm-email">Corfirmar Email</label>
         <?=$erros['confirm-email']?>
-        <input class="form-control" type="email" name="confirm-email" value="<?=$dadosInseridos["confirm-email"]?>">
+        <input class="form-control" id="input-confirm-email" type="email" name="confirm-email" required value="<?=$dadosInseridos["confirm-email"]?>">
     </div>
     <div class="form-group">
-        <label for="">Senha</label>
+        <label for="input-senha">Senha</label>
         <?=$erros['senha']?>
-        <input class="form-control" type="password" name="senha" value="<?=$dadosInseridos["senha"]?>">
+        <input class="form-control" id="input-senha" type="password" name="senha" required value="<?=$dadosInseridos["senha"]?>">
     </div>
      <div class="form-group">
-        <label for="">Confirmar Senha</label>
+        <label for="input-confirm-senha">Confirmar Senha</label>
         <?=$erros['confirm-senha']?>
-        <input class="form-control" type="password" name="confirm-senha" value="<?=$dadosInseridos["confirm-senha"]?>">
+        <input class="form-control" id="input-confirm-senha" type="password" name="confirm-senha" required value="<?=$dadosInseridos["confirm-senha"]?>">
     </div>
     <input type="hidden" name="<?=$csrf['nome']?>" value="<?=$csrf['hash']?>">
-    <button class="btn btn-primary" type="submit">Criar conta</button>
+    <button class="btn btn-primary" id="botao-adicionar" type="submit">Criar conta</button>
 </form>
+
