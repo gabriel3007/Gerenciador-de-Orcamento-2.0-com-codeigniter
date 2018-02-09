@@ -1,6 +1,6 @@
 <h2>Categorias</h2>
-<h3><a class="btn btn-primary" href="<?=base_url('categorias/adicionar')?>">Adicionar categoria</a></h3>
-<h3><a class="btn btn-primary" href="/categorias/downloadExcel">Gerar Excel</a></h3>
+<a class="adicionar bottom-link glyphicon glyphicon-plus" href="<?=base_url('categorias/adicionar')?>"></a>
+<a class="excel bottom-link glyphicon glyphicon-file" href="/categorias/downloadExcel"></a>
 <table class="table table-hover">
     <thead>
         <tr>

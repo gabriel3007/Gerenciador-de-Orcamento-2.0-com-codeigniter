@@ -41,7 +41,7 @@ class Categorias extends CI_Controller{
             $categoria = new Categoria($dadosCategoria);
             $this->CategoriaDao->salva($categoria);
             $this->session->set_flashdata("success", "Categoria adicionada com sucesso, <a href='/categorias'>Confira!</a> ");
-            redirect("/categorias/adicionar ");
+            redirect("/categorias/adicionar");
         }
         $this->session->set_flashdata("erros", validation_errors());
         redirect("/categorias/adicionar");

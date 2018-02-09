@@ -1,0 +1,73 @@
+@font-face{
+	font-family: Fight;
+	src: url('/application/assets/fonts/FIGHTT3_.ttf'); 
+}
+a{text-decoration: none;}
+
+header{
+	font-family: Roboto, sans-serif;
+	margin-bottom: 1em;
+}
+
+h1{
+	font-family: Fight;
+	text-transform: capitalize;
+	font-weight: bold;
+	margin-top: 1em;
+	font-size: 4em;
+	color: #2e2c50;
+}
+
+.logado-main-title{
+	color: white;
+	margin: 0 1em;
+	float: left;
+	position: relative;
+	bottom: 16px;
+}
+.deslogado-header{
+	text-align: center;
+}
+.logado-header{
+	background-color: #2e2c50;
+	width: 100%;
+	padding: 3em 1.2em;
+}
+
+.logado-nav{
+	font-weight: lighter;
+}
+.logado-link-menu{
+	color: white;
+}
+.logado-menu-list{
+
+}
+.logado-item-menu{
+	display: inline;
+	margin: 0em 2em;
+}
+.logado-item-menu a{
+	font-weight: lighter;
+	font-size: 1.7em;
+}
+.logado-item-menu a:hover, .deslogado-item-menu:hover{
+	color: #6965ad;
+	text-decoration: none;
+}
+.deslogado-item-menu{
+	display: inline-block;
+	margin: 0em 2em;
+}
+.deslogado-item-menu a{
+	font-size: 1.6em;
+	font-weight: lighter;
+	text-decoration: none;
+	color: #d4cd02;
+}
+.itens-menu-list{
+	margin: 2em;
+	padding: 0.5em;
+	border-top: 2px solid #2e2c50;
+	border-bottom: 2px solid #2e2c50;
+}

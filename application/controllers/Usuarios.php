@@ -49,7 +49,7 @@ class Usuarios extends CI_Controller{
             $usuario = new Usuario($dadosUsuario);
             $this->login->iniciaSessao($usuario);
             $this->gerenciador_orcamento->carregaOrcamento($usuario->id);
-            redirect("/");
+            redirect(base_url("/Orcamento"));
         }
         $this->session->set_flashdata("danger", "Erro ao efetuar login, verifique seus dados");
         redirect("/usuarios/login");
@@ -57,6 +57,6 @@ class Usuarios extends CI_Controller{
 
     public function logout(){
         $this->login->encerraSessao();
-        redirect("/");
+        redirect(base_url("/"));
     }
 }
